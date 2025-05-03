@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amazon Header Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #131921;
+      color: white;
+      padding: 20px 25px;
+      flex-wrap: wrap;
+      
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 50px;
+      font-weight: bold;
+      color: #ff9900;
+    }
+
+    .logo span {
+      color: white;
+      font-size: 18px;
+    }
+
+    .location {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+
+    .search-bar {
+      display: flex;
+      flex: 1;
+      max-width: 600px;
+      margin: 10px 20px;
+      min-width: 300px;
+      
+    }
+
+    .search-bar select {
+      padding: 6px;
+      border: none;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 6px;
+      border: none;
+    }
+
+    .search-btn {
+      background-color: #febd69;
+      border: none;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 12px;
+    }
+
+    .account, .orders {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart {
+      position: relative;
+    }
+
+    .cart-count {
+      background-color: orange;
+      color: black;
+      border-radius: 50%;
+      padding: 0 6px;
+      font-weight: bold;
+      position: absolute;
+      top: -8px;
+      left: 20px;
+    }
+
+    .subnav {
+      background-color: #232f3e;
+      color: white;
+      display: flex;
+      height: max-content;
+      gap: 15px;
+      font-size: 14px;
+      overflow-x: auto;
+    }
+
+    .subnav a {
+      margin-left: 3px ;
+      color: white;
+      text-decoration: none;
+      white-space: nowrap;
+      margin-bottom: 4px;
+    }
+    .dual-slideshow {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        margin: 30px 40px;
+      }
+
+      .slideshow {
+        flex: 1;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .slideshow img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        animation: fade 6s infinite;
+      }
+
+      .slideshow.left img:nth-child(1) {
+        animation-delay: 0.5s;
+      }
+      .slideshow.left img:nth-child(2) {
+        animation-delay: 3s;
+      }
+
+      .slideshow.right img:nth-child(1) {
+        animation-delay: 0.5s;
+      }
+      .slideshow.right img:nth-child(2) {
+        animation-delay: 3s;
+      }
+      @keyframes fade {
+        0%,
+        100% {
+          opacity: 0;
+        }
+        10%,
+        45% {
+          opacity: 1;
+        }
+        50%,
+        100% {
+          opacity: 0;
+        }
+      }
+      body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #ffe59e, #ffa751);
+  padding: 20px;
+}
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.product-list,
+.deal-list,
+.shopping-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+.product-list img,
+.deal img,
+.shopping-list .item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.deal {
+  position: relative;
+  width: 100px;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #b12704;
+  color: white;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.label {
+  font-size: 11px;
+  color: #b12704;
+  display: block;
+  margin-top: 70px;
+  text-align: center;
+}
+
+.shopping-list .item {
+  width: 100px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.shopping-list small {
+  color: gray;
+  font-size: 11px;
+}
+
+.ad-card img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  color: #007185;
+  font-size: 14px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+  
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item {
+  width: calc(50% - 5px);
+  font-size: 14px;
+  text-align: left;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.wide-image {
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+a {
+  color: #007185;
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+img{
+    height: auto;
+}
+.bot , .bot a{
+    width: 100%;
+    height:30px;
+    text-align: center;
+    background-color: #231F3E;
+    color: white;
+}
+.table{
+    height: auto;
+    background-color: #232F3E;
+    color: white;
+}
+.table td li a{
+    color: white;
+}
+.t1 td li a, .t1 ul{
+    color: white;
+    list-style-type: none;
+}
+.t1{
+    background-color: black;
+}
+
+  </style>
+</head>
+<body>
+    <div id="top">
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">amazon<span>.in</span></div>
+      <div class="location">
+        <span class="line1">Deliver to Jelson</span><br/>
+        <span class="line2">Nambol 795134</span>
+      </div>
+    </div>
+    
+    <div class="search-bar">
+      <select>
+        <option>All</option>
+      </select>
+      <input type="text" placeholder="Search Amazon.in" />
+      <button class="search-btn">🔍</button>
+    </div>
+    
+    <div class="nav-right">
+      <div class="lang">🇮🇳 EN ▼</div>
+      <div class="account">
+        <span>Hello, Jelson</span>
+        <strong>Account & Lists ▼</strong>
+      </div>
+      <div class="orders">
+        <span>Returns</span>
+        <strong>& Orders</strong>
+      </div>
+      <div class="cart">
+        🛒<span class="cart-count">5</span> Cart
+      </div>
+    </div>
+  </header>
+</div>
+  <nav class="subnav">
+    <a href="#">☰ All </a>
+    <a href="#">Keep Shopping for</a>
+    <a href="#">Buy Again</a>
+    <a href="#">AmazonBasics</a>
+    <a href="#">MX Player</a>
+    <a href="#">Sell</a>
+    <a href="#">Amazon Pay</a>
+    <a href="#">Gift Cards</a>
+    <a href="#">Gift Ideas</a>
+    <a href="#">Books</a>
+    <a href="#">Home Improvement</a>
+    <a href="#">Today's Deals</a>
+    <a href="#">Health, Household & Personal Care</a>
+  </nav>
+  <main>
+    <div class="dual-slideshow">
+      <div class="slideshow left">
+        <img src="ama1.jpg" alt="Left Slide 1" />
+        <img src="ama2.jpg" alt="Left Slide 2" />
+      </div>
+      <div class="slideshow right">
+        <img src="ama3.jpg" alt="Right Slide 1" />
+        <img src="ama4.jpg" alt="Right Slide 2" />
+      </div>
+    </div>
+    
+    <div class="recommendation-grid">
+      <div class="card">
+        <h3>Pick up where you left off</h3> <br> 
+        <div class="product-list">
+          <img src="product1.jpg" alt="">
+          <img src="product2.jpg" alt="">
+          <img src="product3.jpg" alt="">
+          <img src="product4.jpg" alt="">
+        </div>
+        <a href="#">See more</a>
+      </div>
+  
+      <div class="card">
+        <h3>Deals based on your shopping trends</h3>
+        <div class="deal-list">
+          <div class="deal">
+            <img src="shorts1.jpg" alt="">
+            <span class="badge">55% off</span>
+            <span class="label">Great Summer Sale</span>
+          </div>
+          <div class="deal">
+            <img src="shorts2.jpg" alt="">
+            <span class="badge">54% off</span>
+            <span class="label">Great Summer Sale</span>
+          </div>
+          <div class="deal">
+            <img src="shorts3.jpg" alt="">
+            <span class="badge">62% off</span>
+            <span class="label">Great Summer Sale</span>
+          </div>
+          <div class="deal">
+            <img src="shorts4.jpg" alt="">
+            <span class="badge">59% off</span>
+            <span class="label">Great Summer Sale</span>
+          </div>
+        </div>
+        <a href="#">See all deals</a>
+      </div>
+  
+      <div class="card">
+        <h3>Keep shopping for</h3> <br>
+        <div class="shopping-list">
+          <div class="item">
+            <img src="white-shorts.jpg" alt="">
+            <span>Men's sports shorts<br><small>1 viewed</small></span>
+          </div>
+          <div class="item">
+            <img src="tracker.jpg" alt="">
+            <span>Activity trackers<br><small>1 viewed</small></span>
+          </div>
+          <div class="item">
+            <img src="soap.jpg" alt="">
+            <span>Solid soap bars<br><small>1 viewed</small></span>
+          </div>
+          <div class="item">
+            <img src="shoes.jpg" alt="">
+            <span>Women's running...<br><small>1 viewed</small></span>
+          </div>
+        </div>
+        <a href="#">View your browsing history</a>
+      </div>
+  
+      <div class="card ad-card">
+        <h3>Single Door Refrigerator</h3>
+        <p>Capacity 207 liters</p>
+        <img src="fridge.jpg" alt="">
+        <img class="promo" src="samsung.jpg" alt="Samsung Promo">
+      </div>
+    </div> <br>
+    <div class="offers-grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <h3>Deals on accessories from your top smartphone...</h3>
+        <div class="card-items">
+          <div class="item">
+            <img src="apple.jpg" alt="Apple">
+            <p>Apple | Up to 20%</p>
+          </div>
+          <div class="item">
+            <img src="samsung1.jpg" alt="Samsung">
+            <p>Samsung | Up to 60% off</p>
+          </div>
+          <div class="item">
+            <img src="oneplus.jpg" alt="Oneplus">
+            <p>Oneplus | Starting ₹599</p>
+          </div>
+          <div class="item">
+            <img src="mi.jpg" alt="Xiaomi">
+            <p>Xiaomi | Up to 70% off</p>
+          </div>
+        </div>
+        <a href="#">See all offers</a>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="card">
+        <h3>Minimum 50% off | Home, kitchen & more</h3>
+        <div class="card-items">
+          <div class="item">
+            <img src="kitchen.jpg" alt="Kitchen">
+            <p>Kitchen essentials</p>
+          </div>
+          <div class="item">
+            <img src="decor.jpg" alt="Home decor">
+            <p>Home decor</p>
+          </div>
+          <div class="item">
+            <img src="chair.jpg" alt="Furniture">
+            <p>Furniture</p>
+          </div>
+          <div class="item">
+            <img src="lock.jpg" alt="Improvement">
+            <p>Home improvement</p>
+          </div>
+        </div>
+        <a href="#">See all deals</a>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="card">
+        <h3>Smartphones curated for you</h3>
+        <div class="card-items">
+          <div class="item">
+            <img src="budget.jpg" alt="Budget">
+            <p>Budget | Under ₹10,000</p>
+          </div>
+          <div class="item">
+            <img src="midrange.jpg" alt="Mid-range">
+            <p>Mid-range | ₹10,000 - ₹25,000</p>
+          </div>
+          <div class="item">
+            <img src="premium.jpg" alt="Premium">
+            <p>Premium | ₹25,000 - ₹40,000</p>
+          </div>
+          <div class="item">
+            <img src="ultra.jpg" alt="Ultra Premium">
+            <p>Ultra Premium | Above ₹40,000</p>
+          </div>
+        </div>
+        <a href="#">See all offers</a>
+      </div>
+  
+      <!-- Card 4 -->
+      <div class="card single">
+        <h3>Starting ₹349 | Bestselling headphones</h3>
+        <img src="headphones.jpg" alt="Headphones" class="wide-image">
+        <a href="#">See all offers</a>
+      </div>
+    </div>
+  </main> <br>
+  <footer>
+
+<div class="table">
+    <div class="bot">
+        <a href="#top"><h2>Go to top</h2></a>
+      </div>
+    <table cellpadding="50">
+        <tr>
+            <td>
+            <ul style="list-style-type: none;">
+                <li><h3>Get to know us</h3></li>
+                <li><a href="#">About amazon</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press release</a></li>
+                <li><a href="#">Amazon Science</a></li>
+            </ul></td>
+            <td>
+            <ul style="list-style-type: none;">
+                <li><h3>Connect with us</h3></li>
+                <li><a href="#">Facebook</a> </li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                
+            </ul></td>
+            <td>
+            <ul style="list-style-type: none;">
+                <li><h3>Make money with us</h3></li>
+                <li><a href="#">Sell on amazon</a></li>
+                <li><a href="#">Sell under amazon accelator</a></li>
+                <li><a href="#">Protect and build your brand</a></li>
+                <li><a href="#">Amazon global selling</a></li>
+                <li><a href="#">Supply to amazon</a></li>
+                <li><a href="#">Become an affliate</a></li>
+                <li><a href="#">Fulfillment by amazon </a></li>
+                <li><a href="#">Advertise your products</a></li>
+                <li><a href="#">Amazon pay on merchant</a></li>
+            </ul></td>
+            <td>
+            <ul style="list-style-type: none;">
+                <li><h3>Let us help you</h3></li>
+                <li><a href="#">Your account</a></li>
+                <li><a href="#">Returns center</a></li>
+                <li><a href="#">Recalls and product safety alerts</a></li>
+                <li><a href="#">100% purchase protection</a></li>
+                <li><a href="#">Amazon app download</a></li>
+                <li><a href="#">Help</a></li>
+            </ul></td>
+
+        </tr>
+    </table>
+    <hr width="100%" color="grey" size="2"> <br>
+</div>
+    <div class="t1">
+    <table  cellpadding="30" >
+        <tr>
+        <td><ul>
+            <li><a href="#"><b>AbeBooks</b><br>Books, art <br>&collectibles</a></li></ul>
+        </td>
+        <td><ul>
+            <li><a href="#"><b>Amazon Web Series</b><br>Scalable cloud<br>Computing services</a></li></ul>
+        </td>
+        <td><ul>
+            <li><a href="#"><b>Audible</b><br>Download  <br>Audio books</a></li></ul>
+        </td>
+        <td><ul>
+            <li><a href="#"><b>IMDB</b><br>Movies, TV<br>& Celebrities</a></li></ul>
+        </td>
+
+    </tr>
+        <tr>
+        <td><ul>
+            <li><a href="#"><b>Shopbop</b><br>Designer <br>Fashion Brands</a></li></ul>
+        </td>
+        <td><ul>
+            <li><a href="#"><b>Amazon Business</b><br>Everything for <br>your business</a></li></ul>
+        </td>
+        <td><ul>
+            <li><a href="#"><b>Prime now</b><br>2-hour delivery <br>on Everyday items</a></li></ul>
+        </td>
+        <td><ul>
+            <li><a href="#"><b>Amazon Prime Music</b><br>100 million songs ad-<br>free <br>over 15 million podcast episodes</a></li></ul>
+        </td>
+
+    </tr>
+    </table>
+    <hr width="100%" color="grey" size="2"> <br> 
+    
+    <div class="last" style="text-align: center; ">
+        <ul style="list-style-type: none;"><li><a href="#" style="color: white;">Conditions of Use & Sale 
+            Privacy Notice
+            Interest-Based Ads</a></li>
+        <li><a href="#" style="color: white;">© 1996-2025, Amazon.com, Inc. or its affiliates</a></li></ul>
+    </div> <br>
+</div> 
+
+
+</footer> 
+</body>
+</html>
